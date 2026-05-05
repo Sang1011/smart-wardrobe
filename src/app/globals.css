@@ -1,26 +1,225 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Colors from mockup design system */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
+
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-tint: var(--surface-tint);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-primary: var(--inverse-primary);
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Primary: deep teal */
+  --primary: #2e6764;
+  --on-primary: #ffffff;
+  --primary-container: #b4ede8;
+  --on-primary-container: #104f4c;
+  --primary-fixed: #b4ede8;
+  --primary-fixed-dim: #98d1cc;
+  --on-primary-fixed: #00201e;
+  --on-primary-fixed-variant: #104f4c;
+
+  /* Secondary: warm neutral */
+  --secondary: #104f4c;
+  --on-secondary: #ffffff;
+  --secondary-container: #e6e2d9;
+  --on-secondary-container: #484740;
+  --secondary-fixed: #e6e2d9;
+  --secondary-fixed-dim: #cac6be;
+  --on-secondary-fixed: #1c1c16;
+  --on-secondary-fixed-variant: #484740;
+
+  /* Tertiary: brighter teal */
+  --tertiary: #006a60;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #8cf5e4;
+  --on-tertiary-container: #005048;
+  --tertiary-fixed: #8cf5e4;
+  --tertiary-fixed-dim: #6fd8c8;
+  --on-tertiary-fixed: #00201c;
+  --on-tertiary-fixed-variant: #005048;
+
+  /* Surfaces */
+  --background: #eefcfa;
+  --foreground: #111e1d;
+  --surface: #eefcfa;
+  --on-surface: #111e1d;
+  --surface-variant: #d7e5e3;
+  --on-surface-variant: #324b49;
+  --surface-dim: #cedddb;
+  --surface-bright: #eefcfa;
+  --surface-tint: #2e6764;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #e8f7f4;
+  --surface-container: #e2f1ef;
+  --surface-container-high: #ddebe9;
+  --surface-container-highest: #d7e5e3;
+
+  /* Misc */
+  --outline: #627c7a;
+  --outline-variant: #b0ccc9;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --inverse-surface: #263332;
+  --inverse-on-surface: #e5f4f1;
+  --inverse-primary: #98d1cc;
+}
+
+@layer base {
+  * {
+    @apply border-outline-variant/30 outline-primary/50 box-border;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Glass panel utility */
+.glass-panel {
+  background: rgba(0, 70, 67, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 198, 191, 0.3);
+}
+
+/* Custom range slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--surface-container-highest);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px var(--primary-container);
+  transition: box-shadow 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 6px var(--primary-container);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--primary);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 4px var(--primary-container);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-container-low);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline);
+}
+
+/* Animation for status pulse */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
 }
