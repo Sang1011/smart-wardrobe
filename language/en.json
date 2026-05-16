@@ -1,0 +1,78 @@
+{
+  "login": {
+    "title": "Smart Wardrobe",
+    "subtitle": "Luxury Virtual Fashion. Organize, plan, and elevate your personal style with intelligent wardrobe management.",
+    "features": {
+      "feature1": {
+        "title": "Smart Organization",
+        "description": "Manage all your clothes in a neat virtual space that is easy to search."
+      },
+      "feature2": {
+        "title": "Style Suggestions",
+        "description": "AI analyzes and suggests perfect outfit combinations based on your preferences and weather."
+      }
+    },
+    "footer": "© 2026 Smart Wardrobe. Luxury Virtual Fashion Experience.",
+    "heading": "Login",
+    "welcome": "Welcome back to Smart Wardrobe.",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login",
+      "divider": "Or"
+    },
+    "social": {
+      "google": "Google",
+      "facebook": "Facebook"
+    },
+    "signup": {
+      "text": "Don't have an account?",
+      "link": "Sign up now"
+    },
+    "accessibility": {
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    }
+  },
+  "register": {
+    "title": "Smart Wardrobe",
+    "subtitle": "Luxury Virtual Fashion. Organize, plan, and elevate your personal style with intelligent wardrobe management.",
+    "features": {
+      "feature1": {
+        "title": "Smart Organization",
+        "description": "Manage all your clothes in a neat virtual space that is easy to search."
+      },
+      "feature2": {
+        "title": "Style Suggestions",
+        "description": "AI analyzes and suggests perfect outfit combinations based on your preferences and weather."
+      }
+    },
+    "footer": "© 2026 Smart Wardrobe. Luxury Virtual Fashion Experience.",
+    "heading": "Create Account",
+    "subheading": "Start your style elevation journey today.",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your name",
+      "age": "Age",
+      "agePlaceholder": "Enter your age",
+      "gender": "Gender",
+      "genderPlaceholder": "Select gender",
+      "genderOptions": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      },
+      "city": "City",
+      "cityPlaceholder": "Enter your city",
+      "favoriteColor": "Favorite Color",
+      "submit": "Complete Registration"
+    },
+    "login": {
+      "text": "Already have an account?",
+      "link": "Login"
+    }
+  }
+}

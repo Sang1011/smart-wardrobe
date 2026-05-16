@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Colors from mockup design system */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
@@ -63,13 +62,29 @@
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
 
-  /* Border radius */
+  /* Font families (matched to tailwind config) */
+  --font-headline: var(--font-heading), "Be Vietnam Pro", sans-serif;
+  --font-display: var(--font-heading), "Be Vietnam Pro", sans-serif;
+  --font-body: var(--font-sans), "Inter", sans-serif;
+  --font-label: var(--font-sans), "Inter", sans-serif;
+
+  /* Border radius (matched to tailwind config) */
   --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
   --radius-full: 9999px;
+
+  /* Spacing (matched to tailwind config) */
+  --spacing-base: 8px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-gutter: 24px;
+  --spacing-margin: 32px;
 }
 
 :root {
@@ -83,8 +98,8 @@
   --on-primary-fixed: #00201e;
   --on-primary-fixed-variant: #104f4c;
 
-  /* Secondary: warm neutral */
-  --secondary: #104f4c;
+  /* Secondary: warm neutral — synced with tailwind config (#605e57) */
+  --secondary: #605e57;
   --on-secondary: #ffffff;
   --secondary-container: #e6e2d9;
   --on-secondary-container: #484740;
@@ -129,6 +144,11 @@
   --inverse-surface: #263332;
   --inverse-on-surface: #e5f4f1;
   --inverse-primary: #98d1cc;
+
+  /* Custom colors */
+  --primary-hover: #245654;
+  --dark-overlay: #004643;
+  --dark-overlay-80: rgba(0, 70, 67, 0.8);
 }
 
 @layer base {
@@ -139,6 +159,16 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+    font-family: var(--font-sans), "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading), "Be Vietnam Pro", sans-serif;
   }
 }
 

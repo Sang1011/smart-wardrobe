@@ -34,6 +34,9 @@ yarn-error.log*
 .env*
 .md*
 
+# documentation guides (project-specific, not for git)
+PROJECT_STRUCTURE_GUIDE.md
+
 # vercel
 .vercel
 

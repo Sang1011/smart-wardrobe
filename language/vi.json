@@ -1,0 +1,78 @@
+{
+  "login": {
+    "title": "Smart Wardrobe",
+    "subtitle": "Thời trang ảo sang trọng. Tổ chức, lên kế hoạch và nâng cao phong cách cá nhân của bạn với quản lý tủ quần áo thông minh.",
+    "features": {
+      "feature1": {
+        "title": "Tổ chức thông minh",
+        "description": "Quản lý toàn bộ trang phục của bạn trong một không gian ảo gọn gàng và dễ tìm kiếm."
+      },
+      "feature2": {
+        "title": "Gợi ý phong cách",
+        "description": "AI phân tích và đề xuất các phối đồ hoàn hảo dựa trên sở thích và thời tiết."
+      }
+    },
+    "footer": "© 2026 Smart Wardrobe. Trải nghiệm thời trang ảo sang trọng.",
+    "heading": "Đăng nhập",
+    "welcome": "Chào mừng bạn quay trở lại với Smart Wardrobe.",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "Nhập email của bạn",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "forgotPassword": "Quên mật khẩu?",
+      "submit": "Đăng nhập",
+      "divider": "Hoặc"
+    },
+    "social": {
+      "google": "Google",
+      "facebook": "Facebook"
+    },
+    "signup": {
+      "text": "Chưa có tài khoản?",
+      "link": "Đăng ký ngay"
+    },
+    "accessibility": {
+      "showPassword": "Hiển thị mật khẩu",
+      "hidePassword": "Ẩn mật khẩu"
+    }
+  },
+  "register": {
+    "title": "Tủ Quần Áo Thông Minh",
+    "subtitle": "Thời trang ảo sang trọng. Tổ chức, lập kế hoạch và nâng tầm phong cách cá nhân của bạn với quản lý tủ quần áo thông minh.",
+    "features": {
+      "feature1": {
+        "title": "Tổ Chức Thông Minh",
+        "description": "Quản lý tất cả quần áo của bạn trong không gian ảo gọn gàng, dễ tìm kiếm."
+      },
+      "feature2": {
+        "title": "Gợi Ý Phong Cách",
+        "description": "AI phân tích và gợi ý những bộ trang phục hoàn hảo dựa trên sở thích và thời tiết của bạn."
+      }
+    },
+    "footer": "© 2026 Tủ Quần Áo Thông Minh. Trải nghiệm thời trang ảo sang trọng.",
+    "heading": "Tạo Tài Khoản",
+    "subheading": "Bắt đầu hành trình nâng tầm phong cách của bạn ngay hôm nay.",
+    "form": {
+      "fullName": "Họ và Tên",
+      "fullNamePlaceholder": "Nhập họ và tên của bạn",
+      "age": "Tuổi",
+      "agePlaceholder": "Nhập tuổi của bạn",
+      "gender": "Giới Tính",
+      "genderPlaceholder": "Chọn giới tính",
+      "genderOptions": {
+        "male": "Nam",
+        "female": "Nữ",
+        "other": "Khác"
+      },
+      "city": "Thành phố",
+      "cityPlaceholder": "Nhập thành phố của bạn",
+      "favoriteColor": "Màu Yêu Thích",
+      "submit": "Hoàn Tất Đăng Ký"
+    },
+    "login": {
+      "text": "Đã có tài khoản rồi?",
+      "link": "Đăng Nhập"
+    }
+  }
+}

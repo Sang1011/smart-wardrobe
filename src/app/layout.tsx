@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
+import { LocaleProvider } from "@/context/LocaleContext";
 
-// Heading font: Be Vietnam Pro — angular, modern, fashionable
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });
 
-// Body font: Inter — clean, highly legible at small sizes
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -25,9 +24,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Atelier — Smart Wardrobe AI",
+  title: "Smart Wardrobe",
   description:
-    "AI-powered fashion platform with 3D mannequin fitting, body analysis, and smart wardrobe management.",
+    "AI-powered fashion platform with smart wardrobe management, outfit suggestions, and style planning.",
 };
 
 export default function RootLayout({
@@ -45,14 +44,17 @@ export default function RootLayout({
         geistMono.variable
       )}
     >
-      <body suppressHydrationWarning
+      <body
+        suppressHydrationWarning
         className={cn(
           "min-h-full flex flex-col",
-          "bg-[var(--background)] text-[var(--foreground)]",
-          "font-[var(--font-sans)]"
+          "bg-background text-on-surface",
+          "font-body"
         )}
       >
-        {children}
+        <LocaleProvider>
+          {children}
+        </LocaleProvider>
       </body>
     </html>
   );
